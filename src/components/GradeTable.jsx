@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 const gradeTable = (props) => {
+
+  let totalQPI;
 
   const gradeEquivalent = {
     'A': 4,
@@ -20,7 +22,14 @@ const gradeTable = (props) => {
     return total + Number(data.courseUnits)
   }, 0)
 
-  const totalQPI = ((totalGradePoints)/(totalUnits)).toFixed(2)
+  totalQPI = (totalGradePoints / totalUnits).toFixed(2);
+
+  if (isNaN(totalQPI)) {
+    totalQPI = 0; 
+  } 
+
+  
+  
    
   return (
     <>
@@ -35,17 +44,19 @@ const gradeTable = (props) => {
               .map((item, index) => (
                     <tr key={item.id}>
                         {/* <th scope='row'>{index+1}</th> */}
-                        <td >{item.courseNo}</td>
-                        <td >{item.courseName}</td>
-                        <td >{item.courseUnits}</td>
-                        <td >{item.courseGrade}</td>
+                        <td className='border-2	border-solid border-white bg-[#2A2B2E] border-spacing-1 p-2 w-20' >{item.courseNo}</td>
+                        <td className='border-2	border-solid border-white bg-[#2A2B2E] border-spacing-1 p-2 w-20'>{item.courseName}</td>
+                        <td className='border-2	border-solid border-white bg-[#2A2B2E] border-spacing-1 p-2 w-20'>{item.courseUnits}</td>
+                        <td className='border-2	border-solid border-white bg-[#2A2B2E] border-spacing-1 p-2 w-20'>{item.courseGrade}</td>
                     </tr>
                   
                     
               ))}
           <tr>
-            <td>Total QPI</td>
-            <td>{totalQPI}</td>
+            <td></td>
+            <td></td>
+            <td className='border-2	border-solid border-white text-[#2A2B2E] bg-white font-bold border-spacing-1 p-2 w-20'>Total QPI</td>
+            <td className='border-2	brder-solid border-white text-[#2A2B2E] bg-white font-bold border-spacing-1 p-2 w-20'>{totalQPI}</td>
          </tr>
 
     </>
