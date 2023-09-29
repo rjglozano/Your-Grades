@@ -36,9 +36,9 @@ const gradeTable = (props) => {
         {props.items
               .filter((item) => (
                 props.query.toLowerCase() === '' ||
-                item.courseNo.toLowerCase().includes(props.query) || 
-                item.courseName.toLowerCase().includes(props.query) ||
-                item.courseGrade.toLowerCase().includes(props.query) ||
+                item.courseNo.toLowerCase().includes(props.query.toLowerCase()) || 
+                item.courseName.toLowerCase().includes(props.query.toLowerCase()) ||
+                item.courseGrade.toLowerCase().includes(props.query.toLowerCase()) ||
                 item.courseUnits.includes(props.query) 
                 ))
               .map((item, index) => (
