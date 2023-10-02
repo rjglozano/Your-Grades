@@ -14,3 +14,11 @@ Step 4: npm tailwind init -p <br/>
 Step 5: Add content in the tailwind config.js <br/>
 Step 6: Add required tailwind imports to index css <br/>
 Step 7: Type "npm run dev" to the terminal to run the program <br/>
+
+How to setup page using react   <br/>
+1. npm install gh-pages --save-dev   <br/>
+2. Add homepage in the vite.config (the link of your website)  <br/>
+3. Add Scripts "predeploy" and deploy    <br/>
+  "predeploy": "npm run build",  <br/>
+  "deploy": "gh-pages -d dist",  <br/>
+4. run in the terminal "npm run deploy"  <br/>
