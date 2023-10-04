@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 Step 1: npm create vite@latest <br/>
 Step 2: npm install <br/>
-Step 3: npm install - D tailwind postcss autoprefixer <br/>
+Step 3: npm install -D tailwind postcss autoprefixer <br/>
 Step 4: npm tailwind init -p <br/>
 Step 5: Add content in the tailwind config.js <br/>
 Step 6: Add required tailwind imports to index css <br/>
